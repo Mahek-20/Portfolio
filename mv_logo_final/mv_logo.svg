@@ -1,0 +1,6 @@
+
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="500" fill="black"/>
+  <text x="70" y="350" font-size="260" font-family="serif" fill="white">M</text>
+  <text x="250" y="350" font-size="260" font-family="serif" fill="rgb(227,178,60)">V</text>
+</svg>

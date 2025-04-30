@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio: Mahek Vesuwala</title>
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+       <a href="./index.html"><img src="./images/logo.png" alt=""></a>
+    </div>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Service</a>
+      <a href="#Explore">My Project</a>
+      <a href="#contact">Contact Me</a>
+    </nav>
+  </header>
+
+<!-- hero section -->
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text fade-in">
+        <h1>Hello, I'm <br><span>Mahek Vesuwala</span></h1>
+        <p></p>
+        <div class="buttons">
+          <a href="#contact" class="btn">Hire Me</a>
+          <a href="#Explore" class="btn btn-outline">Explore More</a>
+        </div>
+      </div>
+      <div class="hero-image fade-in">
+        <img src="./images/me.jpg" alt="Mahek Vesuwala">
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <h2>ABOUT ME</h2>
+    <div class="underline"></div>
+    <p>
+      Hello! I'm Mahek! As a student of computer science engineering, I have a strong interest in developing front-end applications and honing my full-stack technology skills. My goal is to use creative web solutions to create user experiences that are both efficient and captivating.
+    </p>
+    <a href="./CV.pdf" target="_blank" class="btn">DOWNLOAD MY CV</a>
+  </section>
+
+<!-- my skills section -->
+
+  <section class="skills-section">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+      <div class="skill" style="--skill-level: 100%;">
+        <p>HTML/CSS</p>
+        <div class="bar"><div class="fill"></div></div>
+      </div>
+      <div class="skill" style="--skill-level: 65%;">
+        <p>JavaScript</p>
+        <div class="bar"><div class="fill"></div></div>
+      </div>
+      <div class="skill" style="--skill-level: 50%;">
+        <p>PHP</p>
+        <div class="bar"><div class="fill"></div></div>
+      </div>
+      <div class="skill" style="--skill-level: 60%;">
+        <p>Python</p>
+        <div class="bar"><div class="fill"></div></div>
+      </div>
+      <div class="skill" style="--skill-level: 60%;">
+        <p>Java</p>
+        <div class="bar"><div class="fill"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- work experiences and -->
+  <section class="what-i-do" id="services">
+    <div class="content-box">
+      <h2>WHAT I DO</h2>
+      <div class="services">
+        <div class="service">
+          <img src="https://img.icons8.com/ios/64/monitor--v1.png" alt="Front-end Icon" />
+          <h3>Front-end</h3>
+          <p>
+            I have experience in HTML5 and CSS3 techniques working with JavaScript and willing to learn many more.
+          </p>
+        </div>
+        <div class="service">
+          <img src="https://img.icons8.com/ios/64/source-code.png" alt="Back-end Icon" />
+          <h3>Web Development</h3>
+          <p>
+            Apart from Front-end Development, I have also learnt MongoDB Cluster and PHP.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- my projects -->
+  <section class="portfolio-section">
+    <h2>MY RECENT WORK</h2>
+    <div class="underline"></div>
+      <video src="./video/1.mp4" controls muted autoplay loop rel="video" id="Explore"></video>
+    </div>
+  </section>
+  <!-- contact me -->
+  <section class="contact-section">
+    <h2>CONTACT ME</h2>
+    <div class="underline"></div>
+    
+    <form class="contact-form" id="contact">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+      </div>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit" class="submit-btn">HIRE ME</button>
+    </form>
+  </section>
+
+
+  <script>
+    const skills = document.querySelectorAll('.skill');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    skills.forEach(skill => observer.observe(skill));
+  </script>
+  
+</body>
+</html>
